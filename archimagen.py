@@ -46,7 +46,7 @@ for i in connections:
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-folder_path = "/content/sample_data/image_src/"
+folder_path = "/home/runner/work/Archimage_Generator/Archimage_Generator/temp_src_images"
 
 if edges_text.strip()[-1]==',':
   edges_text = edges_text.strip()[:-1]
