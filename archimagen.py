@@ -81,7 +81,7 @@ def get_image_urls(query):
             image_urls.append(img_url)
     return image_urls[1]
 
-with Diagram("/home/runner/work/Archimage_Generator/Archimage_Generator/Architecture_images/architecture_diagram.png", show=False):
+with Diagram("/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/architecture_diagram.png", show=False):
 """
 services = re.findall(r"(['\"])(.*?)\1", edges_text)
 services = list(set([match[1] for match in services]))
