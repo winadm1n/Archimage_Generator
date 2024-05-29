@@ -31,8 +31,8 @@ jobs:
         cd ..
         echo "${{ github.event.inputs.mermaid_script }}" > mermaid.html
         python archimagen.py -m "$(cat mermaid.html)"
-        cat dynamic_diagrams_code.py
-        cd Architecture_images
+        # cat dynamic_diagrams_code.py
+        cd dynamically_generated_stuff
         rm -rf temp_src_images/*
         rm -rf architecture_diagram.png
         python dynamic_diagrams_code.py
