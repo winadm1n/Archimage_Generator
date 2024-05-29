@@ -25,21 +25,26 @@ jobs:
         
     - name: Install dependencies
       run: |
-        echo "${{ github.event.inputs.mermaid_script }}"
         pip install -r requirements.txt
         sudo apt-get install graphviz
-        ls -a
-        # cd temp_src_images
-        # pwd
-        # cd ..
+
+        
+    - name: Generate Diagrams Code
+      run: |
         echo "${{ github.event.inputs.mermaid_script }}" > mermaid.html
         python archimagen.py -m "$(cat mermaid.html)" -o "${{ github.event.inputs.img_name }}"
-        # cat dynamic_diagrams_code.py
+
+        
+    - name: Create Diagram
+      run: |
         cd dynamically_generated_stuff
         rm -rf temp_src_images/*
         rm -rf architecture_diagram.png
         python dynamic_diagrams_code.py
+
         
+    - name: Save Diagram to Main
+      run: |
         git config user.email "winadm1n@protonmail.com"
         git config user.name "winadm1n"
         git add .
