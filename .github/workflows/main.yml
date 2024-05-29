@@ -32,9 +32,9 @@ jobs:
         echo "${{ github.event.inputs.mermaid_script }}" > mermaid.html
         python archimagen.py -m "$(cat mermaid.html)"
         cat dynamic_diagrams_code.py
+        cd Architecture_images
         rm -rf temp_src_images/*
         rm -rf architecture_diagram.png
-        cd Architecture_images
         python dynamic_diagrams_code.py
         
         git config user.email "winadm1n@protonmail.com"
