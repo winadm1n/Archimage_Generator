@@ -12,7 +12,7 @@ args = parser.parse_args()
 content = args.mermaid
 
 
-
+print(content)
 mermaid_edges_text = re.findall(r'<div class=\\"mermaid\\">.*graph LR(.*?)</div>',content,re.DOTALL)
 fullforms_dict = {}
 fullforms = re.findall(r'(\D)\[(.*?)\]',mermaid_edges_text[0],re.MULTILINE)
