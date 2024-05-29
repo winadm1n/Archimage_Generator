@@ -31,9 +31,10 @@ jobs:
         pwd
         cd ..
         echo "${{ github.event.inputs.mermaid_script }}" > mermaid.html
-        python archimagen.py -m "$(cat mermaid.html)" > diagramsgen.py
-        cat diagramsgen.py
-        python diagramsgen.py
+        python archimagen.py -m "$(cat mermaid.html)"
+        cat dynamic_diagrams_code.py
+        # cat diagramsgen.py
+        python dynamic_diagrams_code.py
         git config user.email "winadm1n@protonmail.com"
         git config user.name "winadm1n"
         git add .
