@@ -6,6 +6,9 @@ on:
       mermaid_script:
         description: 'Mermaid Script'
         required: true
+      img_name:
+        description: 'Name to store image'
+        required: true
  
 jobs:
  
@@ -30,7 +33,7 @@ jobs:
         # pwd
         # cd ..
         echo "${{ github.event.inputs.mermaid_script }}" > mermaid.html
-        python archimagen.py -m "$(cat mermaid.html)"
+        python archimagen.py -m "$(cat mermaid.html)" -o "${{ github.event.inputs.img_name }}"
         # cat dynamic_diagrams_code.py
         cd dynamically_generated_stuff
         rm -rf temp_src_images/*
