@@ -7,7 +7,7 @@ import urllib3
 parser = argparse.ArgumentParser(description="A script to take mermaid script as input and generate architecture image")
 parser.add_argument('-m', '--mermaid', type=str, required=True, help='mermaid scriprt')
 parser.add_argument('-o', '--output', type=str, help='Output file to save the image.')
-parser.add_argument('-v', '--verbose', action='store_true', help='Enable verbose output.')
+# parser.add_argument('-v', '--verbose', action='store_true', help='Enable verbose output.')
 args = parser.parse_args()
 content = args.mermaid
 
