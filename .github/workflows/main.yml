@@ -42,14 +42,3 @@ jobs:
         git add .
         git commit -m "Move files to new folder"
         git push origin main
-        # python archimagen.py -m "${{ github.event.inputs.mermaid_script }}"
-        # python -m pip install --upgrade pip
-        # pip install flake8 pytest
-        # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    
-
-
-    # - name: print_input
-    #   run: |
-    #     javac *.java
-    #   working-directory: ./migrated-${{ github.event.inputs.mermaid_script }}/src
