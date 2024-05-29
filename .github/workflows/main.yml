@@ -28,7 +28,7 @@ jobs:
         
     - name: Install dependencies
       run: |
-        echo {{ github.event.inputs.mermaid_script }}
+        echo ${{ github.event.inputs.mermaid_script }}
         python --version
         # python -m pip install --upgrade pip
         # pip install flake8 pytest
