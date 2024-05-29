@@ -2,3 +2,4 @@ diagrams
 requests
 beautifulsoup4
 urllib3
+openai==0.28
