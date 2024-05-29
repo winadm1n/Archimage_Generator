@@ -6,7 +6,7 @@ on:
       mermaid_script:
         description: 'Mermaid Script'
         required: true
-        default : "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Generated Architecture</title>\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.css\">\n</head>\n<body>\n    <div class=\"mermaid\">\n        graph LR\n        A[Text Data] --> B[Azure Cognitive Services]\n        B --> C[Sentiment Analysis]\n        C --> D[Sentiment Score]\n        D --> E[Positive/Negative Result]\n    </div>\n    <script src=\"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js\"></script>\n    <script>\n        mermaid.initialize({\n                        startOnLoad: true\n                    });\n    </script>\n</body>\n</html>"
+        default : "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width initial-scale=1.0\">\n    <title>Generated Architecture</title>\n    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.css\">\n</head>\n<body>\n    <div class=\"mermaid\">\n        graph LR\n        A[Text Data] --> B[Azure Cognitive Services]\n        B --> C[Sentiment Analysis]\n        C --> D[Sentiment Score]\n        D --> E[Positive/Negative Result]\n    </div>\n    <script src=\"https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js\"></script>\n    <script>\n        mermaid.initialize({\n                        startOnLoad: true\n                    });\n    </script>\n</body>\n</html>"
  
  
 jobs:
