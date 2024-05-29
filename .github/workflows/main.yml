@@ -1,0 +1,42 @@
+name: Generate and execute Diagrams python script
+
+on:
+  workflow_dispatch:
+    inputs:
+      mermaid_script:
+        description: 'Mermaid Script'
+        required: true
+ 
+jobs:
+ 
+  generate_diagrams_code:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.ACTIONS_PAT_TOKEN }}
+
+    
+    # - uses: actions/checkout@v4
+    # - name: Set up Python 3.10
+    #   uses: actions/setup-python@v3
+    #   with:
+    #     python-version: "3.10"
+        
+    - name: Install dependencies
+      run: |
+        echo {{ github.event.inputs.mermaid_script }}
+        python --version
+        # python -m pip install --upgrade pip
+        # pip install flake8 pytest
+        # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    
+
+
+    # - name: print_input
+    #   run: |
+    #     javac *.java
+    #   working-directory: ./migrated-${{ github.event.inputs.mermaid_script }}/src
