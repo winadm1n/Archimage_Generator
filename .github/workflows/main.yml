@@ -24,7 +24,7 @@ jobs:
       run: |
         echo "${{ github.event.inputs.mermaid_script }}"
         python --version
-        # pip install -r requirements.txt
+        pip install -r requirements.txt
         ls -a
         python archimagen.py -m "${{ github.event.inputs.mermaid_script }}"
         # python -m pip install --upgrade pip
