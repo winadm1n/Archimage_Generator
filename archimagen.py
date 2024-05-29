@@ -142,3 +142,10 @@ for connection in connections:
 
 python_code += arrows
 print(python_code)
+file_path = "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamic_diagrams_code.py"
+
+# Write the script to the file
+with open(file_path, 'w') as file:
+    file.write(python_code)
+
+print(f"Python script has been written to {file_path}")
