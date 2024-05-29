@@ -29,6 +29,11 @@ jobs:
         echo "${{ github.event.inputs.mermaid_script }}" > mermaid.html
         python archimagen.py -m "$(cat mermaid.html)" > diagramsgen.py
         cat diagramsgen.py
+        git config user.email "winadm1n@protonmail.com"
+        git config user.name "winadm1n"
+        git add .
+        git commit -m "Move files to new folder"
+        git push origin main
         # python archimagen.py -m "${{ github.event.inputs.mermaid_script }}"
         # python -m pip install --upgrade pip
         # pip install flake8 pytest
