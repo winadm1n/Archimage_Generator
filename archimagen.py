@@ -11,6 +11,24 @@ parser.add_argument('-o', '--output', type=str, help='Output file to save the im
 args = parser.parse_args()
 content = args.mermaid
 
+import openai
+
+openai.api_type = "azure"
+openai.api_base = "https://btaasopenai.openai.azure.com/"
+openai.api_version = "2023-07-01-preview"
+openai.api_key = "b1af33941ef9408088e7180ca36947ee"
+
+def get_completion(prompt, model="gpt-3.5-turbo"):
+  messages = [{"role": "user", "content": prompt}]
+  response = openai.ChatCompletion.create(
+    engine="Taas",
+    messages=messages,
+    temperature=0,
+    # max_tokens=20000,
+    stop=None
+    )
+  return response.choices[0].message["content"]
+
 
 print(content)
 mermaid_edges_text = re.findall(r'<div class="*mermaid"*>\s*graph LR(.*?)</div>',content,re.DOTALL)
