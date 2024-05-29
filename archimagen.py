@@ -50,7 +50,7 @@ folder_path = "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamic
 
 if edges_text.strip()[-1]==',':
   edges_text = edges_text.strip()[:-1]
-python_code = """
+python_code = f"""
 from diagrams import Diagram
 from diagrams.custom import Custom
 from urllib.request import urlretrieve
@@ -81,7 +81,7 @@ def get_image_urls(query):
             image_urls.append(img_url)
     return image_urls[1]
 
-with Diagram("Architecture_images/groot_architecture_diagram.png", show=False):
+with Diagram("Architecture_images/{args.output}", show=False):
 """
 services = re.findall(r"(['\"])(.*?)\1", edges_text)
 services = list(set([match[1] for match in services]))
