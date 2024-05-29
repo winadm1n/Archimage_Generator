@@ -26,7 +26,10 @@ jobs:
         # python --version
         pip install -r requirements.txt
         sudo apt-get install graphviz
-        # ls -a
+        ls -a
+        cd temp_src_images
+        pwd
+        cd ..
         echo "${{ github.event.inputs.mermaid_script }}" > mermaid.html
         python archimagen.py -m "$(cat mermaid.html)" > diagramsgen.py
         cat diagramsgen.py
