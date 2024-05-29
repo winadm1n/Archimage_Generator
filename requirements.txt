@@ -1,1 +1,4 @@
 diagrams
+requests
+beautifulsoup4
+urllib3
