@@ -34,6 +34,8 @@ jobs:
         python archimagen.py -m "$(cat mermaid.html)"
         cat dynamic_diagrams_code.py
         # cat diagramsgen.py
+        rm -rf temp_src_images/*
+        rm -rf architecture_diagram.png
         python dynamic_diagrams_code.py
         git config user.email "winadm1n@protonmail.com"
         git config user.name "winadm1n"
