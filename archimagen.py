@@ -30,7 +30,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
   return response.choices[0].message["content"]
 
 
-print(content)
+# print(content)
 mermaid_edges_text = re.findall(r'<div class="*mermaid"*>\s*graph LR(.*?)</div>',content,re.DOTALL)
 fullforms_dict = {}
 fullforms = re.findall(r'(\D)\[(.*?)\]',mermaid_edges_text[0],re.MULTILINE)
@@ -40,7 +40,7 @@ edges_text = ''
 connections = re.findall(r'(\w)(?:\[.*?\])*\s-->\s(\w)',mermaid_edges_text[0],re.MULTILINE)
 for i in connections:
   edges_text = edges_text + f"'{fullforms_dict[i[0]]}': '{fullforms_dict[i[1]]}',"
-print(edges_text)
+# print(edges_text)
 
 
 
@@ -85,7 +85,7 @@ with Diagram("architecture_diagram", show=False):
 """
 services = re.findall(r"(['\"])(.*?)\1", edges_text)
 services = list(set([match[1] for match in services]))
-print(services)
+# print(services)
 
 
 cloud_platform = "AZURE"
@@ -102,12 +102,12 @@ noncloud = [Services not belonging to {cloud_platform}]
 """
 
 response = get_completion(prompt)
-print(response)
+# print(response)
 lists = re.findall(r'\[([^]]*)\]', response)
 cloud = [item.strip().replace("'","") for item in lists[0].split(',')]
 non_cloud = [item.strip().replace("'","") for item in lists[1].split(',')]
-print(cloud)
-print(non_cloud)
+# print(cloud)
+# print(non_cloud)
 
 
 declarations = ''
