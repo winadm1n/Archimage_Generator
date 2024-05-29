@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content=width=device-width initial-scale=1.0>
+    <title>Generated Architecture</title>
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.css>
+</head>
+<body>
+    <div class=mermaid>
+        graph LR
+        A[Text Data] --> B[Azure Cognitive Services]
+        B --> C[Sentiment Analysis]
+        C --> D[Sentiment Score]
+        D --> E[Positive/Negative Result]
+    </div>
+    <script src=https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js></script>
+    <script>
+        mermaid.initialize({
+                        startOnLoad: true
+                    });
+    </script>
+</body>
+</html>
