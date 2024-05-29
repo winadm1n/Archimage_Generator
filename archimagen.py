@@ -46,7 +46,7 @@ for i in connections:
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-folder_path = "/home/runner/work/Archimage_Generator/Archimage_Generator/Architecture_images/temp_src_images/"
+folder_path = "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/"
 
 if edges_text.strip()[-1]==',':
   edges_text = edges_text.strip()[:-1]
@@ -142,7 +142,7 @@ for connection in connections:
 
 python_code += arrows
 print(python_code)
-file_path = "/home/runner/work/Archimage_Generator/Archimage_Generator/Architecture_images/dynamic_diagrams_code.py"
+file_path = "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/dynamic_diagrams_code.py"
 
 # Write the script to the file
 with open(file_path, 'w') as file:
