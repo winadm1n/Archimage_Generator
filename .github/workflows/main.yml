@@ -31,7 +31,7 @@ jobs:
         
     - name: Generate Diagrams Code
       run: |
-        echo "${{ github.event.inputs.mermaid_script }}" > mermaid.html
+        echo "${{ github.event.inputs.mermaid_script }}" > temporary_mermaid.html
         python archimagen.py -m "$(cat mermaid.html)" -o "${{ github.event.inputs.img_name }}"
 
         
