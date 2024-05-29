@@ -28,24 +28,24 @@ def get_image_urls(query):
         if img_url:
             image_urls.append(img_url)
     return image_urls[1]
-with Diagram("Architecture_images/hanuman", show=False):
+with Diagram("Architecture_images/Lokesh", show=False):
+    urlretrieve(get_image_urls("icon of Sentiment Score in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Sentiment_Score_icon.png")
+    Sentiment_Score_ = Custom("Sentiment Score \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Sentiment_Score_icon.png")
+
+    urlretrieve(get_image_urls("icon of Text Data in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Text_Data_icon.png")
+    Text_Data_ = Custom("Text Data \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Text_Data_icon.png")
+
     urlretrieve(get_image_urls("icon of Sentiment Analysis in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Sentiment_Analysis_icon.png")
     Sentiment_Analysis_ = Custom("Sentiment Analysis \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Sentiment_Analysis_icon.png")
-
-    urlretrieve(get_image_urls("icon of azure cloud functions in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/azure_cloud_functions_icon.png")
-    azure_cloud_functions_ = Custom("azure cloud \nfunctions ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/azure_cloud_functions_icon.png")
 
     urlretrieve(get_image_urls("icon of Azure Cognitive Services in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Azure_Cognitive_Services_icon.png")
     Azure_Cognitive_Services_ = Custom("Azure Cognitive \nServices ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Azure_Cognitive_Services_icon.png")
 
-    urlretrieve(get_image_urls("icon of hanuman in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/hanuman_icon.png")
-    hanuman_ = Custom("hanuman ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/hanuman_icon.png")
-
-    urlretrieve(get_image_urls("icon of cosmos effect in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/cosmos_effect_icon.png")
-    cosmos_effect_ = Custom("cosmos effect \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/cosmos_effect_icon.png")
+    urlretrieve(get_image_urls("icon of Positive/Negative Result in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Positive_Negative_Result_icon.png")
+    Positive_Negative_Result_ = Custom("Positive/Negative Result \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Positive_Negative_Result_icon.png")
 
 
-    azure_cloud_functions_ >> Azure_Cognitive_Services_
+    Text_Data_ >> Azure_Cognitive_Services_
     Azure_Cognitive_Services_ >> Sentiment_Analysis_
-    Sentiment_Analysis_ >> hanuman_
-    hanuman_ >> cosmos_effect_
+    Sentiment_Analysis_ >> Sentiment_Score_
+    Sentiment_Score_ >> Positive_Negative_Result_
