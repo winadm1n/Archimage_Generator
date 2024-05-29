@@ -13,7 +13,7 @@ content = args.mermaid
 
 
 
-mermaid_edges_text = re.findall(r'<div class="mermaid">\s*graph LR(.*?)</div>',content,re.DOTALL)
+mermaid_edges_text = re.findall(r'<div class=\\"mermaid\\">.*graph LR(.*?)</div>',content,re.DOTALL)
 fullforms_dict = {}
 fullforms = re.findall(r'(\D)\[(.*?)\]',mermaid_edges_text[0],re.MULTILINE)
 for i in fullforms:
