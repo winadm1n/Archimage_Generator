@@ -26,7 +26,7 @@ jobs:
         python --version
         pip install -r requirements.txt
         ls -a
-        python archimagen.py -m "${{ github.event.inputs.mermaid_script }}"
+        python archimagen.py -m "${{ github.event.inputs.mermaid_script }}" -o "outputfilename"
         # python -m pip install --upgrade pip
         # pip install flake8 pytest
         # if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
