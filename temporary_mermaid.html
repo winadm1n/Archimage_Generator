@@ -1,24 +1,43 @@
-<!DOCTYPE html>
-<html lang=en>
-<head>
-    <meta charset=UTF-8>
-    <meta name=viewport content=width=device-width initial-scale=1.0>
-    <title>Generated Architecture</title>
-    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.css>
-</head>
-<body>
-    <div class=mermaid>
-        graph LR
-        A[azure cloud functions] --> B[Azure Cognitive Services]
-        B --> C[bal ganesh cute]
-        C --> D[bal hanuman cute]
-        D --> E[cosmos effect]
-    </div>
-    <script src=https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js></script>
-    <script>
-        mermaid.initialize({
+
+            <!DOCTYPE html>
+            <html lang=en>
+            <head>
+                <meta charset=UTF-8>
+                <meta name=viewport content=width=device-width, initial-scale=1.0>
+                <title>Generated Architecture</title>
+                <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.css>
+            </head>
+            <body>
+                <div class=mermaid>
+                    graph LR
+
+subgraph Frontend
+  A[Web App] --> B[API Management]
+end
+
+subgraph Backend
+  C[App Service] --> D[Logic App]
+  C --> E[Functions]
+  C --> F[Storage Account]
+  C --> G[SQL Database]
+end
+
+subgraph Azure Services
+  H[Remote Care Services] --> D
+  I[Appointment Booking] --> E
+  J[Dataset Storage] --> F
+  K[Data Transfer] --> F
+  L[Chatbot] --> G
+end
+
+B --> C
+                </div>
+                <script src=https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js></script>
+                <script>
+                    mermaid.initialize({
                         startOnLoad: true
                     });
-    </script>
-</body>
-</html>
+                </script>
+            </body>
+            </html>
+            
