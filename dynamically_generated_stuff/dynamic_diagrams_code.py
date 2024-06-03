@@ -28,9 +28,15 @@ def get_image_urls(query):
         if img_url:
             image_urls.append(img_url)
     return image_urls[1]
-with Diagram("Architecture_images/ganesh", show=False):
-    urlretrieve(get_image_urls("icon of bal hanuman cute in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/bal_hanuman_cute_icon.png")
-    bal_hanuman_cute_ = Custom("bal hanuman \ncute ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/bal_hanuman_cute_icon.png")
+with Diagram("Architecture_images/govinda", show=False):
+    urlretrieve(get_image_urls("icon of Azure Cognitive Services in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Azure_Cognitive_Services_icon.png")
+    Azure_Cognitive_Services_ = Custom("Azure Cognitive \nServices ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Azure_Cognitive_Services_icon.png")
+
+    urlretrieve(get_image_urls("icon of bal govinda cute in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/bal_govinda_cute_icon.png")
+    bal_govinda_cute_ = Custom("bal govinda \ncute ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/bal_govinda_cute_icon.png")
+
+    urlretrieve(get_image_urls("icon of cosmos effect in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/cosmos_effect_icon.png")
+    cosmos_effect_ = Custom("cosmos effect \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/cosmos_effect_icon.png")
 
     urlretrieve(get_image_urls("icon of azure cloud functions in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/azure_cloud_functions_icon.png")
     azure_cloud_functions_ = Custom("azure cloud \nfunctions ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/azure_cloud_functions_icon.png")
@@ -38,14 +44,8 @@ with Diagram("Architecture_images/ganesh", show=False):
     urlretrieve(get_image_urls("icon of bal ganesh cute in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/bal_ganesh_cute_icon.png")
     bal_ganesh_cute_ = Custom("bal ganesh \ncute ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/bal_ganesh_cute_icon.png")
 
-    urlretrieve(get_image_urls("icon of cosmos effect in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/cosmos_effect_icon.png")
-    cosmos_effect_ = Custom("cosmos effect \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/cosmos_effect_icon.png")
-
-    urlretrieve(get_image_urls("icon of Azure Cognitive Services in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Azure_Cognitive_Services_icon.png")
-    Azure_Cognitive_Services_ = Custom("Azure Cognitive \nServices ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Azure_Cognitive_Services_icon.png")
-
 
     azure_cloud_functions_ >> Azure_Cognitive_Services_
     Azure_Cognitive_Services_ >> bal_ganesh_cute_
-    bal_ganesh_cute_ >> bal_hanuman_cute_
-    bal_hanuman_cute_ >> cosmos_effect_
+    bal_ganesh_cute_ >> bal_govinda_cute_
+    bal_govinda_cute_ >> cosmos_effect_
