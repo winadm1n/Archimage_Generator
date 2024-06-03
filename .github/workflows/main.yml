@@ -52,11 +52,13 @@ jobs:
         
         # # Download an image from a URL (replace with your actual URL)
         # wget -O image.jpg https://example.com/image.jpg
-        pwd
-        ls -a
+        wget -O image.png https://learn.microsoft.com/en-us/azure/architecture/solution-ideas/media/simple-branded-website.png
+        # pwd
+        # ls -a
         
         # Perform OCR on the downloaded image
-        tesseract "dynamically_generated_stuff/architecture_images/${{ github.event.inputs.img_name }}.png" output
+        # tesseract "dynamically_generated_stuff/architecture_images/${{ github.event.inputs.img_name }}.png" output
+        tesseract image.png output
         
         # Display the OCR output
         cat output.txt
