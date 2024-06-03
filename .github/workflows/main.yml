@@ -39,7 +39,7 @@ jobs:
       run: |
         cd dynamically_generated_stuff
         rm -rf temp_src_images/*
-        rm -rf architecture_diagram.png
+        # rm -rf architecture_diagram.png
         python dynamic_diagrams_code.py
 
     - name: Detect text from Diagram
@@ -52,9 +52,11 @@ jobs:
         
         # # Download an image from a URL (replace with your actual URL)
         # wget -O image.jpg https://example.com/image.jpg
+        pwd
+        ls -a
         
         # Perform OCR on the downloaded image
-        tesseract architecture_diagram.png output
+        tesseract "Architecture_images/${{ github.event.inputs.img_name }}.png" output
         
         # Display the OCR output
         cat output.txt
