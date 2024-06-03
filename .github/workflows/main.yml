@@ -52,7 +52,8 @@ jobs:
         
         # # Download an image from a URL (replace with your actual URL)
         # wget -O image.jpg https://example.com/image.jpg
-        wget -O image.png https://learn.microsoft.com/en-us/azure/architecture/solution-ideas/media/simple-branded-website.png
+        # wget -O image.png https://learn.microsoft.com/en-us/azure/architecture/solution-ideas/media/simple-branded-website.png
+        wget -O image.png https://learn.microsoft.com/azure/architecture/browse/thumbs/architecture-automation.png
         # pwd
         # ls -a
         
