@@ -56,7 +56,7 @@ jobs:
         ls -a
         
         # Perform OCR on the downloaded image
-        tesseract "dynamically_generated_stuff/Architecture_images/${{ github.event.inputs.img_name }}.png" output
+        tesseract "dynamically_generated_stuff/architecture_images/${{ github.event.inputs.img_name }}.png" output
         
         # Display the OCR output
         cat output.txt
