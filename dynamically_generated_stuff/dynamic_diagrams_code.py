@@ -29,11 +29,8 @@ def get_image_urls(query):
             image_urls.append(img_url)
     return image_urls[1]
 with Diagram("Architecture_images/architecture", show=False):
-    urlretrieve(get_image_urls("icon of Web App in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Web_App_icon.png")
-    Web_App_ = Custom("Web App \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Web_App_icon.png")
-
-    urlretrieve(get_image_urls("icon of Remote Care Services in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Remote_Care_Services_icon.png")
-    Remote_Care_Services_ = Custom("Remote Care \nServices ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Remote_Care_Services_icon.png")
+    urlretrieve(get_image_urls("icon of Chatbot in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Chatbot_icon.png")
+    Chatbot_ = Custom("Chatbot ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Chatbot_icon.png")
 
     urlretrieve(get_image_urls("icon of Appointment Booking in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Appointment_Booking_icon.png")
     Appointment_Booking_ = Custom("Appointment Booking \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Appointment_Booking_icon.png")
@@ -41,29 +38,32 @@ with Diagram("Architecture_images/architecture", show=False):
     urlretrieve(get_image_urls("icon of Dataset Storage in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Dataset_Storage_icon.png")
     Dataset_Storage_ = Custom("Dataset Storage \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Dataset_Storage_icon.png")
 
+    urlretrieve(get_image_urls("icon of SQL Database in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/SQL_Database_icon.png")
+    SQL_Database_ = Custom("SQL Database \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/SQL_Database_icon.png")
+
     urlretrieve(get_image_urls("icon of API Management in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/API_Management_icon.png")
     API_Management_ = Custom("API Management \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/API_Management_icon.png")
-
-    urlretrieve(get_image_urls("icon of Logic App in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Logic_App_icon.png")
-    Logic_App_ = Custom("Logic App \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Logic_App_icon.png")
-
-    urlretrieve(get_image_urls("icon of Data Transfer in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Data_Transfer_icon.png")
-    Data_Transfer_ = Custom("Data Transfer \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Data_Transfer_icon.png")
-
-    urlretrieve(get_image_urls("icon of App Service in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/App_Service_icon.png")
-    App_Service_ = Custom("App Service \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/App_Service_icon.png")
-
-    urlretrieve(get_image_urls("icon of Chatbot in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Chatbot_icon.png")
-    Chatbot_ = Custom("Chatbot ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Chatbot_icon.png")
 
     urlretrieve(get_image_urls("icon of Functions in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Functions_icon.png")
     Functions_ = Custom("Functions ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Functions_icon.png")
 
+    urlretrieve(get_image_urls("icon of App Service in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/App_Service_icon.png")
+    App_Service_ = Custom("App Service \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/App_Service_icon.png")
+
     urlretrieve(get_image_urls("icon of Storage Account in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Storage_Account_icon.png")
     Storage_Account_ = Custom("Storage Account \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Storage_Account_icon.png")
 
-    urlretrieve(get_image_urls("icon of SQL Database in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/SQL_Database_icon.png")
-    SQL_Database_ = Custom("SQL Database \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/SQL_Database_icon.png")
+    urlretrieve(get_image_urls("icon of Remote Care Services in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Remote_Care_Services_icon.png")
+    Remote_Care_Services_ = Custom("Remote Care \nServices ", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Remote_Care_Services_icon.png")
+
+    urlretrieve(get_image_urls("icon of Data Transfer in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Data_Transfer_icon.png")
+    Data_Transfer_ = Custom("Data Transfer \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Data_Transfer_icon.png")
+
+    urlretrieve(get_image_urls("icon of Web App in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Web_App_icon.png")
+    Web_App_ = Custom("Web App \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Web_App_icon.png")
+
+    urlretrieve(get_image_urls("icon of Logic App in AZURE"), "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Logic_App_icon.png")
+    Logic_App_ = Custom("Logic App \n", "/home/runner/work/Archimage_Generator/Archimage_Generator/dynamically_generated_stuff/temp_src_images/Logic_App_icon.png")
 
 
     Web_App_ >> API_Management_
