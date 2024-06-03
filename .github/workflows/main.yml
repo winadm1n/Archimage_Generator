@@ -42,6 +42,24 @@ jobs:
         rm -rf architecture_diagram.png
         python dynamic_diagrams_code.py
 
+    - name: Detect text from Diagram
+      run: |
+        # Update package list
+        sudo apt update
+        
+        # Install Tesseract OCR
+        sudo apt install tesseract-ocr
+        
+        # # Download an image from a URL (replace with your actual URL)
+        # wget -O image.jpg https://example.com/image.jpg
+        
+        # Perform OCR on the downloaded image
+        tesseract architecture_diagram.png output
+        
+        # Display the OCR output
+        cat output.txt
+
+
         
     - name: Save Diagram to Main
       run: |
